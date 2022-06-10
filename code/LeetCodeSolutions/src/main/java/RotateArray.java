@@ -11,7 +11,29 @@ public class RotateArray {
 
 
         rotate(matrix);
+        System.out.println(findRotation(matrix,outputArray));
     }
+    private static boolean isSame(int[][] matrix, int[][] outputArray) {
+        for (int i=0;i< matrix.length-1;i++){
+            for (int j=0;j< matrix[0].length-1;j++){
+                   if (matrix[i][j] != outputArray[i][j]){
+                       return false;
+                   }
+            }
+        }
+
+      return true;
+    }
+    private static boolean  findRotation(int[][] matrix, int[][] outputArray) {
+        if(isSame(matrix,outputArray)) return true;
+        for (int i=0;i <4 ;i++){
+            if(isSame(matrix,outputArray)) return true;
+            else rotate(matrix);
+        }
+        return false;
+    }
+
+
     private static void print(int[][] matrix){
         for (int i=0;i< matrix.length;i++){
             System.out.print("[");
@@ -23,7 +45,7 @@ public class RotateArray {
         }
     }
 
-    private static void rotate(int[][] matrix) {
+    private static int[][] rotate(int[][] matrix) {
         //transpose
          for(int i=0;i< matrix.length;i++){
              for (int j=0;j<i;j++){
@@ -48,6 +70,7 @@ public class RotateArray {
         }
         System.out.println("rotated");
         print(matrix);
+        return matrix;
 
     }
 }
