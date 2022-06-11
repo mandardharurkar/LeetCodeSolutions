@@ -32,4 +32,4 @@ class Solution {
 
 ### Links
 
-- [github.com/RodneyShag](https://github.com/RodneyShag)
+- [github.com/mandardharurkar](https://github.com/mandardharurkar)
