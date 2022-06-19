@@ -4,7 +4,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class DiningPhilosophers {
     public static void main(String[] args) {
         DiningPhilosophers diningPhilosophers= new DiningPhilosophers();
-       
+
     }
     public ReentrantLock[] forks = new ReentrantLock[5];
     public Semaphore taken = new Semaphore(4);      // Avoid deadlock
