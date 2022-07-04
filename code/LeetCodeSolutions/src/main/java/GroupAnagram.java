@@ -4,6 +4,8 @@ public class GroupAnagram {
     public static void main(String[] args) {
      String [] str = new String[]{"eat","tea","tan","ate","nat","bat"};
         System.out.println(groupAnagrams(str));
+
+        
     }
 
 
